@@ -10,8 +10,8 @@ namespace GamblingSimulatorProblem
     {
         static void Main(string[] args)
         {
-            const int STAKE_OF_EVERYDAY = 100;
-            const int BET_FOR_EVERY_GAME = 1;
+            Gambler gambler = new Gambler();
+            gambler.Play();
         }
     }
 }
