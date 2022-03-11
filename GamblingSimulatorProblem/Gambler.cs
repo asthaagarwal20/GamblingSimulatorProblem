@@ -17,14 +17,17 @@ namespace GamblingSimulatorProblem
             int leftAmount = 100;
             Random random = new Random();
             int option = random.Next(0, 2);
-            switch (option)
+            while (leftAmount > 50 && leftAmount < 150)
             {
-                case LOSE:
-                    leftAmount = leftAmount - BET_FOR_EVERY_GAME;
-                    break;
-                case WIN:
-                    leftAmount = leftAmount + BET_FOR_EVERY_GAME;
-                    break;
+                switch (option)
+                {
+                    case LOSE:
+                        leftAmount = leftAmount - BET_FOR_EVERY_GAME;
+                        break;
+                    case WIN:
+                        leftAmount = leftAmount + BET_FOR_EVERY_GAME;
+                        break;
+                }
             }
             Console.WriteLine("LeftAmount is " + leftAmount);
         }
